@@ -2,6 +2,25 @@
 
 Complete final project for predicting monthly demand for Shampoo, Body Wash, and Laundry Detergent. The included dataset is **synthetic demonstration data**, not real Medtherm factory data.
 
+### generate data
+```bash
+python3 scripts/generate_factory_demand_variant.py --rows 10000
+
+or keep last file
+
+python3 scripts/generate_factory_demand_variant.py \
+  --rows 10000 \
+  --output data/factory_demand_1m.csv
+```
+
+Generate a larger dataset without holding all rows in memory:
+
+```bash
+python3 scripts/generate_factory_demand_variant.py --rows 1000000
+```
+
+The million-row CSV exceeds the web application's default 10 MB upload limit and
+is intended for offline or scalable training workflows.
 ## Run
 
 ```bash
