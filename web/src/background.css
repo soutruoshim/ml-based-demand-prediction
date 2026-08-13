@@ -34,6 +34,25 @@ body {
 .report-toolbar small { color: #bcd7dc; }
 .report-toolbar button { background: #fff; color: #116c68; }
 
+.validation-panel { margin-top: 24px; }
+.validation-panel.valid { border-color: rgba(20, 135, 126, 0.5); }
+.validation-panel.invalid { border-color: rgba(165, 62, 50, 0.5); }
+.validation-heading, .validation-heading > div { display: flex; align-items: center; gap: 14px; }
+.validation-heading { justify-content: space-between; margin-bottom: 18px; }
+.validation-heading h2, .validation-heading p { margin: 0; }
+.status-mark { display: grid; place-items: center; flex: 0 0 42px; width: 42px; height: 42px; color: #fff; background: #14877e; border-radius: 50%; font-size: 22px; font-weight: 700; }
+.invalid .status-mark { background: #a53e32; }
+.validation-stats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.validation-stats span { padding: 8px 12px; background: #edf7f6; border-radius: 9px; color: #58707e; font-size: 13px; }
+.validation-stats b { margin-right: 5px; color: #173042; }
+.quality-message { margin: 8px 0; }
+.warning { padding: 12px 14px; color: #815b12; background: #fff7dc; border-radius: 10px; }
+.validation-panel h3 { margin: 22px 0 10px; font-size: 15px; }
+
+html[data-theme="dark"] .validation-stats span { color: #a9c0c8; background: #0d2c38; }
+html[data-theme="dark"] .validation-stats b { color: #e9f5f7; }
+html[data-theme="dark"] .warning { color: #f0cc7a; background: #443612; }
+
 .theme-switch {
   gap: 0;
   padding: 3px;
@@ -187,6 +206,8 @@ header {
   }
 
   .report-toolbar { align-items: stretch; flex-direction: column; }
+  .validation-heading { align-items: stretch; flex-direction: column; }
+  .validation-heading button { width: 100%; }
 }
 
 @page { size: A4 portrait; margin: 12mm; }
@@ -201,7 +222,7 @@ header {
   header { padding: 0 0 14px; margin-bottom: 14px; background: none !important; border: 0; border-bottom: 2px solid #14877e; border-radius: 0; box-shadow: none; }
   header h1 { color: #102f43 !important; font-size: 30px; }
   header p { color: #58707e !important; font-size: 12px; margin-bottom: 0; }
-  .header-tools, .upload-card, .report-toolbar button { display: none !important; }
+  .header-tools, .upload-card, .validation-panel, .report-toolbar button { display: none !important; }
   .report-toolbar { display: block; margin: 0 0 12px; padding: 0; color: #173042; background: none; box-shadow: none; }
   .report-toolbar small { color: #58707e; }
   .stats { margin: 10px 0; }
