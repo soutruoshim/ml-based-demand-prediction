@@ -1,0 +1,10 @@
+Feature,Permutation importance,Std. deviation
+previous_sales,157.1508,20.4554
+product_type,86.7277,14.7549
+price,79.0205,15.3737
+customer_order_quantity,65.7626,9.7587
+season,31.3478,6.7706
+promotion,22.1103,5.7534
+month,6.9239,2.6651
+previous_production_quantity,0.0664,0.3345
+stock_quantity,0.0462,0.042

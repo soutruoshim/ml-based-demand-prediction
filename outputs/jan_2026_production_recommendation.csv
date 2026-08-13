@@ -1,0 +1,4 @@
+product_type,predicted_demand,stock_quantity,safety_stock_10_percent,recommended_production
+Shampoo,1653,353,165,1465
+Body Wash,1167,101,117,1183
+Laundry Detergent,1741,391,174,1524
