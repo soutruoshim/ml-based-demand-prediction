@@ -1,0 +1,232 @@
+body {
+  min-height: 100vh;
+  background-color: #eaf5f7;
+  background-image:
+    linear-gradient(180deg, rgba(238, 249, 250, 0.1) 0%, rgba(243, 247, 247, 0.82) 42%, #f3f7f7 78%),
+    url('/assets/ai-factory-background.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+
+.control-row,
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 24px 0 0;
+  padding: 16px 20px;
+  color: #dff7f4;
+  background: linear-gradient(110deg, #102f43, #146a70);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(8, 49, 73, 0.18);
+}
+
+.report-toolbar div { display: flex; flex-direction: column; gap: 2px; }
+.report-toolbar small { color: #bcd7dc; }
+.report-toolbar button { background: #fff; color: #116c68; }
+
+.theme-switch {
+  gap: 0;
+  padding: 3px;
+  border-radius: 10px;
+  background: #e5efee;
+}
+
+.theme-switch button {
+  min-width: 34px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  color: #536b78;
+  background: transparent;
+  font-size: 15px;
+}
+
+.theme-switch button.active {
+  color: #14877e;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(18, 58, 74, 0.13);
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  color: #dcecf2;
+  background: #071923;
+}
+
+html[data-theme="dark"] body {
+  color: #dcecf2;
+  background-color: #071923;
+  background-image:
+    linear-gradient(180deg, rgba(3, 18, 28, 0.28) 0%, rgba(7, 25, 35, 0.88) 43%, #071923 78%),
+    url('/assets/ai-factory-background.png');
+}
+
+html[data-theme="dark"] header {
+  background: linear-gradient(120deg, rgba(8, 31, 43, 0.94), rgba(11, 51, 61, 0.82));
+  border-color: rgba(114, 203, 207, 0.2);
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.34);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] .drop strong,
+html[data-theme="dark"] td {
+  color: #e9f5f7;
+}
+
+html[data-theme="dark"] header p,
+html[data-theme="dark"] .drop small,
+html[data-theme="dark"] .hint,
+html[data-theme="dark"] .panel p,
+html[data-theme="dark"] article small,
+html[data-theme="dark"] .stats span,
+html[data-theme="dark"] footer {
+  color: #9db5be;
+}
+
+html[data-theme="dark"] .upload-card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .stats article {
+  background: rgba(8, 29, 40, 0.94);
+  border-color: rgba(111, 173, 180, 0.22);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .drop {
+  color: #dcecf2;
+  background: rgba(13, 43, 54, 0.82);
+  border-color: #397c7a;
+}
+
+html[data-theme="dark"] .stats .accent {
+  background: #0d3b4d;
+}
+
+html[data-theme="dark"] th {
+  color: #a9c0c8;
+  background: #0d2c38;
+}
+
+html[data-theme="dark"] th,
+html[data-theme="dark"] td {
+  border-bottom-color: #193d48;
+}
+
+html[data-theme="dark"] tbody tr:hover {
+  background: #0d2c38;
+}
+
+html[data-theme="dark"] .language,
+html[data-theme="dark"] .theme-switch {
+  background: #102f3b;
+}
+
+html[data-theme="dark"] .language button,
+html[data-theme="dark"] .theme-switch button {
+  color: #9eb8c0;
+}
+
+html[data-theme="dark"] .language button.active,
+html[data-theme="dark"] .theme-switch button.active {
+  color: #65d6ca;
+  background: #194453;
+}
+
+html[data-theme="dark"] .recharts-cartesian-axis-tick-value,
+html[data-theme="dark"] .recharts-legend-item-text {
+  fill: #a9c0c8;
+  color: #a9c0c8 !important;
+}
+
+html[data-theme="dark"] .recharts-cartesian-grid line {
+  stroke: #294854;
+}
+
+html[data-theme="dark"] .recharts-default-tooltip {
+  color: #dcecf2 !important;
+  background: #0d2c38 !important;
+  border-color: #315663 !important;
+}
+
+header {
+  border-radius: 26px;
+  padding: 30px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.93), rgba(232, 249, 248, 0.76));
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: 0 20px 60px rgba(8, 49, 73, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.upload-card,
+.panel,
+.stats article {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 800px) {
+  body {
+    background-size: auto 720px;
+    background-position: 62% top;
+    background-attachment: scroll;
+  }
+
+  header {
+    padding: 22px;
+  }
+
+  .report-toolbar { align-items: stretch; flex-direction: column; }
+}
+
+@page { size: A4 portrait; margin: 12mm; }
+
+@media print {
+  html, html[data-theme="dark"], body, html[data-theme="dark"] body {
+    color: #173042 !important;
+    background: #fff !important;
+  }
+
+  main { max-width: none; padding: 0; }
+  header { padding: 0 0 14px; margin-bottom: 14px; background: none !important; border: 0; border-bottom: 2px solid #14877e; border-radius: 0; box-shadow: none; }
+  header h1 { color: #102f43 !important; font-size: 30px; }
+  header p { color: #58707e !important; font-size: 12px; margin-bottom: 0; }
+  .header-tools, .upload-card, .report-toolbar button { display: none !important; }
+  .report-toolbar { display: block; margin: 0 0 12px; padding: 0; color: #173042; background: none; box-shadow: none; }
+  .report-toolbar small { color: #58707e; }
+  .stats { margin: 10px 0; }
+  .stats article, html[data-theme="dark"] .stats article, .panel, html[data-theme="dark"] .panel {
+    color: #173042 !important; background: #fff !important; border: 1px solid #cfdede; box-shadow: none; backdrop-filter: none;
+  }
+  .stats .accent, html[data-theme="dark"] .stats .accent { color: #fff !important; background: #102f43 !important; }
+  .panel { break-inside: avoid; margin-bottom: 10px; padding: 14px; }
+  .panel h2, html[data-theme="dark"] .panel h2, td, html[data-theme="dark"] td { color: #173042 !important; }
+  .panel p, html[data-theme="dark"] .panel p, article small, html[data-theme="dark"] article small, .stats span, html[data-theme="dark"] .stats span { color: #58707e; }
+  .table-wrap { overflow: visible; }
+  table { min-width: 0; }
+  th, html[data-theme="dark"] th { color: #526b76; background: #eef5f5 !important; }
+  th, td { padding: 7px 6px; font-size: 9px; border-color: #dce7e7 !important; }
+  tbody tr { break-inside: avoid; }
+  footer { color: #58707e !important; padding: 10px 0 0; }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  header,
+  .upload-card,
+  .panel,
+  .stats article {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: #fff;
+  }
+}

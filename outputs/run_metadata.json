@@ -1,9 +1,9 @@
 {
   "dataset_type": "synthetic demonstration",
   "random_seed": 16,
-  "records": 177,
-  "training_records": 141,
-  "test_records": 36,
+  "records": 100000,
+  "training_records": 79998,
+  "test_records": 20002,
   "best_model": "Linear Regression",
   "primary_metric": "RMSE"
 }

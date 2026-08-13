@@ -26,7 +26,8 @@ is intended for offline or scalable training workflows.
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python src/train_model.py
+#.venv/bin/python src/train_model.py
+.venv/bin/python src/train_model.py --data data/synthetic_factory_demand_variant.csv
 .venv/bin/python src/sync_final_report.py
 .venv/bin/python src/create_presentation.py
 ```
